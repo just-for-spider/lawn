@@ -1,0 +1,11 @@
+calldetail		starttime		        2017-02-22 08:11:40
+calldetail		calllonghour		    14秒
+calldetail		calllonghourunitsecond	14
+calldetail		calltypename		    被叫
+calldetail		calltype		        2
+calldetail		othernum		        18973009609
+calldetail		homeareaname		    长沙
+calldetail		otherareaName	        北京	
+calldetail		calledhome		        岳阳
+calldetail		landtype		        国内通话
+calldetail		totalfee		        0.00

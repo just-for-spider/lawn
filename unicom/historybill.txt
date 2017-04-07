@@ -1,0 +1,9 @@
+historybill custname 唐贤
+historybill usernumber 15507312690
+historybill nowFee 132.3
+historybill discount 132.3
+historybill payTotal 0.0
+historybill billcycle 2017-2-1 2017-2-28
+historybill paySum 150.00
+historybill historyresultlist {"\u8bed\u97f3\u901a\u8bdd\u8d39": "15.2", "\u5b9e\u9645\u5e94\u7f34\u5408\u8ba1": "0.0", "\u6708\u56fa\u5b9a\u8d39": "66.0", "\u589e\u503c\u4e1a\u52a1\u8d39": "1.1", "\u62b5\u6263\u5408\u8ba1": "132.3", "\u4e0a\u7f51\u8d39": "50.0"}
+historybill billcycle 2016-9-1 2016-9-30

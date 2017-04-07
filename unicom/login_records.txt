@@ -1,0 +1,9 @@
+login_records	user_id        15507312690
+login_records	cust_id        9116030787240538
+login_records	login_time     2017-03-22 11:33:12
+login_records	login_from     网上营业厅
+login_records	login_location 广东 深圳
+login_records	login_ip       111.200.*.*
+login_records	brower         Chrome 53.0.2785.143
+login_records	os	           Windows 7
+

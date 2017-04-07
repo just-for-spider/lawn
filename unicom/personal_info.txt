@@ -1,0 +1,22 @@
+personal_info	custname	    左弦
+personal_info	custlvl	        三星用户
+personal_info	certtype	    02
+personal_info	certtypename	18位身份证
+personal_info	certnum	        41138119921128713X
+personal_info	usernumber	    18537179815
+personal_info	custsex	        1
+personal_info	custsexname	    男
+personal_info	certaddr	    河南省邓州市刘集镇北何冲村何岗2号
+personal_info	provincecode	76
+personal_info	province	    河南
+personal_info	citycode	    760
+personal_info	opendate	    2016-06-11 11:50:02
+personal_info	paytype	        2
+personal_info	paytypename	    后付费
+personal_info	subscrbstat	    开通
+personal_info	brandcode	    4G00
+personal_info	brandname	    沃4G后付费
+personal_info	productname	    4G全国套餐-136元套餐
+personal_info	productid	    99999828
+personal_info	producttype	    01
+personal_info	serial_numbers	037106283659|18537179815
