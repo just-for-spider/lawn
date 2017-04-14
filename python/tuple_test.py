@@ -7,27 +7,18 @@
 ########################################################################
  
 """
-File: class_test.py
+File: tuple_test.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/11 09:56:16
 """
 
-class A(object):
+dic = {'a': (1, 2)}
 
-    num = 100
+m, n = dic.get('b', (0, 0))
 
-    def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
-
-        print 'num', A.num
-        print 'num', self.num
+print m, n
 
 
 
-a = A()
 
-print __name__
-
-
+0 0

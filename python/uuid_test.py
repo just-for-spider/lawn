@@ -7,27 +7,26 @@
 ########################################################################
  
 """
-File: class_test.py
+File: uuid_test.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/10 16:51:26
 """
 
-class A(object):
+import uuid
 
-    num = 100
 
-    def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
+std = 'YYS_LT_%s'
 
-        print 'num', A.num
-        print 'num', self.num
+token = uuid.uuid1().get_hex()
+print type(token)
+
+print std % (token, )
 
 
 
-a = A()
 
-print __name__
+
+<type 'str'>
+YYS_LT_22b3a8641dcb11e7b1a7964791d484c0
 
 

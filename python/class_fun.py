@@ -7,27 +7,19 @@
 ########################################################################
  
 """
-File: class_test.py
+File: class_fun.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/12 15:00:59
 """
 
 class A(object):
 
-    num = 100
-
     def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
+        pass
 
-        print 'num', A.num
-        print 'num', self.num
+    def insert(self, a):
+        print a
 
-
-
-a = A()
-
-print __name__
-
+    def insert(self, a, b):
+        print a, b
 

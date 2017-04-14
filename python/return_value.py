@@ -7,27 +7,18 @@
 ########################################################################
  
 """
-File: class_test.py
+File: return_value.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/13 11:02:46
 """
 
-class A(object):
 
-    num = 100
+def fun(a):
 
-    def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
-
-        print 'num', A.num
-        print 'num', self.num
+    if a:
+        return a
 
 
+print fun(1)
 
-a = A()
-
-print __name__
-
-
+print fun(0)

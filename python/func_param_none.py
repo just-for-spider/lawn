@@ -7,27 +7,18 @@
 ########################################################################
  
 """
-File: class_test.py
+File: func_param_none.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/10 16:36:16
 """
 
-class A(object):
-
-    num = 100
-
-    def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
-
-        print 'num', A.num
-        print 'num', self.num
+def fun(a, b=None, c):
+    print b
+    print a, c
 
 
 
-a = A()
+fun(a=100, c=1000)
 
-print __name__
 
 

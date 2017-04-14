@@ -7,27 +7,24 @@
 ########################################################################
  
 """
-File: class_test.py
+File: yield_test.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/13 15:17:27
 """
 
-class A(object):
+def fun(a):
 
-    num = 100
-
-    def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
-
-        print 'num', A.num
-        print 'num', self.num
+    if a:
+        yield (100, 100)
+    else:
+        yield 100
 
 
 
-a = A()
+for i in fun(0):
+    print i
 
-print __name__
+for i in fun(1):
+    print i
 
 

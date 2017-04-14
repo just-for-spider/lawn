@@ -7,27 +7,17 @@
 ########################################################################
  
 """
-File: class_test.py
+File: exception_test.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/12 13:48:25
 """
 
-class A(object):
+dic = {'_rowkey': '100'}
+print dic
 
-    num = 100
+dic['__rowkey'] = 1000
 
-    def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
+print dic
 
-        print 'num', A.num
-        print 'num', self.num
-
-
-
-a = A()
-
-print __name__
-
+raise Exception('key err')
 

@@ -7,27 +7,22 @@
 ########################################################################
  
 """
-File: class_test.py
+File: date_format.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/12 11:16:57
 """
 
-class A(object):
+import datetime
 
-    num = 100
+a = '2017年4月12日'
 
-    def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
+now = datetime.datetime.strptime(a, '%Y年%m月%d日')
 
-        print 'num', A.num
-        print 'num', self.num
+b = now.strftime('%Y-%m-%d')
 
 
-
-a = A()
-
-print __name__
+print b, type(b)
 
 
+
+2017-04-12 <type 'str'>

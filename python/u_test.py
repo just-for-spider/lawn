@@ -7,27 +7,15 @@
 ########################################################################
  
 """
-File: class_test.py
+File: u_test.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/03/27 15:22:24
+Date: 2017/04/13 18:04:33
 """
 
-class A(object):
-
-    num = 100
-
-    def __init__(self):
-        print __name__
-        print self.__class__.__name__
-        print self.__class__
-
-        print 'num', A.num
-        print 'num', self.num
+a = u'中国'
 
 
-
-a = A()
-
-print __name__
+print isinstance(a, basestring)
 
 
+True
