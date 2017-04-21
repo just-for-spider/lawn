@@ -1,0 +1,71 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+########################################################################
+# 
+# Copyright (c) 2017 Qianbao.com, Inc. All Rights Reserved
+# 
+########################################################################
+ 
+"""
+File: select_max.py
+Author: wangqj(wangqj@qianbao.com)
+Date: 2017/04/21 13:57:26
+"""
+
+a = """
+2017-04-01 14:54:29  GJJ_HUNAN_430105196906113015_0a45f78416a811e7b878da72e7f5d32e
+2017-04-01 14:55:05  GJJ_HUNAN_430111197712163729_1d2c830e16a811e7b878da72e7f5d32e
+2017-04-01 14:55:49  GJJ_HUNAN_431321199309076581_39a9e8be16a811e7b878da72e7f5d32e
+2017-04-01 14:56:32  GJJ_HUNAN_430103198009182033_53c2c22a16a811e7b878da72e7f5d32e
+2017-04-01 14:58:09  GJJ_HUNAN_430681198510019025_86276d1a16a811e7b878da72e7f5d32e
+2017-04-19 15:14:28  GJJ_HUNAN_430681198510019025_1112222222222233333333333344444
+2017-04-20 15:28:25  GJJ_HUNAN_430111197712163729_xxxx20170227-b4ee-4530-b2c6-62c3f79dbd11
+2017-04-20 15:33:31  GJJ_HUNAN_431321199309076581_20170227-b4ee-4530-b2c6-62c3f79dbd
+2017-04-20 15:34:25  GJJ_HUNAN_431321199309076581_20170227-b4ee-4530-b2c6-62c3f79d1d
+2017-04-20 15:46:44  GJJ_HUNAN_430681198510019025_aaaaaaaaaaa-111111111111
+2017-04-20 15:51:38  GJJ_HUNAN_431321199309076581_20170227-b4ee-4530-b2c6-62c3f79d2d
+2017-04-20 15:56:21  GJJ_HUNAN_431321199309076581_20170227-b4ee-4530-b2c6-62c3f79d55d
+2017-04-20 15:56:58  GJJ_HUNAN_431321199309076581_20170227-b4ee-4530-b2c6762c3f79d55d
+2017-04-20 15:59:47  GJJ_HUNAN_430105196906113015_4f716324259f11e79768964791d484c0
+2017-04-20 16:04:23  GJJ_HUNAN_430681198510019025_aaaaaaaaaaa-1111as11111111
+2017-04-20 16:06:06  GJJ_HUNAN_430103198009182033_20170227-b4ee-4530-b2c6762c3f79d55d
+2017-04-20 16:07:29  GJJ_HUNAN_430103198009182033_20170227-b4ee-4530-b2JMc6762c3f79d55d
+2017-04-20 16:22:16  GJJ_HUNAN_430681198510019025_aaaaaaadsadaaaaa-1111as111112ADSAS1111
+2017-04-20 16:34:12  GJJ_HUNAN_430681198510019025_aaaaaaadsadaaaaa-1111aasdadsadasdasdsaaaaaaaaa1
+2017-04-20 16:39:25  GJJ_HUNAN_430103198009182033_20170227-b4ee-4530-b2JMc6762c3669d66d
+2017-04-20 16:45:18  GJJ_HUNAN_430105196906113015_a956a93e25a511e79610964791d484c0
+2017-04-20 16:47:22  GJJ_HUNAN_430111197712163729_f42541e625a511e79610964791d484c0
+2017-04-20 16:47:47  GJJ_HUNAN_431321199309076581_fe9f1ed025a511e79610964791d484c0
+2017-04-20 18:14:12  GJJ_HUNAN_430681198510019025_aaaaasdasdaasdsaaaaaaaaa1
+2017-04-20 18:16:42  GJJ_HUNAN_430681198510019025_aaaaasdasdaasdsaasdaaaaaaaaa1
+2017-04-20 19:50:03  GJJ_HUNAN_430681198510019025_aaaaasdasdaasdsaasdaaaasdsdasdaaaaaaa1
+"""
+
+import os
+import time
+from operator import itemgetter
+from itertools import groupby
+
+a = a.strip()
+arr = a.split(os.linesep)
+res_arr = []
+for line in arr:
+    dt, rowkey = line.split('  ')
+    dt = time.mktime(time.strptime(dt,'%Y-%m-%d %H:%M:%S'))
+    dt = int(dt)
+    id = rowkey.split('_')[2]
+    res_arr.append((id, dt, rowkey))
+
+res_arr.sort(key=itemgetter(0, 1))
+
+arr_out = []
+for k, g in groupby(res_arr, key=itemgetter(0)):
+    gl = list(g)
+    for x in gl[0: -1]:
+        arr_out.append(x)
+print '*********' * 10
+for e in arr_out:
+    print e
+
+
+

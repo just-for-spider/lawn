@@ -19,12 +19,19 @@ def fun(a):
     else:
         yield 100
 
+    yield 10, 100, 1000
 
 
-for i in fun(0):
-    print i
+for m, n, q in fun(1):
+    print m
 
-for i in fun(1):
-    print i
+
+
+Traceback (most recent call last):
+  File "yield_test.py", line 25, in <module>
+    for m, n, q in fun(1):
+ValueError: need more than 2 values to unpack
+
+
 
 
