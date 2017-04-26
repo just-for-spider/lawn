@@ -28,6 +28,7 @@ def to_bytes(text, encoding=None, errors='strict'):
 
 def _urlencode(seq, enc):
     values = [(to_bytes(k, enc), to_bytes(v, enc)) for k, v in seq]
+    print values
     return urlencode(values, doseq=1)
 
 
@@ -59,4 +60,4 @@ print querystr
 
 doc = doPost(uri, querystr)
 
-print doc
+#print doc
