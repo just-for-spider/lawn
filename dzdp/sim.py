@@ -12,6 +12,45 @@ Author: wangqj(wangqj@qianbao.com)
 Date: 2017/04/25 11:22:30
 """
 
+from __future__ import division, unicode_literals
+
+import hashlib
+import collections
+from itertools import groupby
+
+
+def _hashfunc(x):
+    return int(hashlib.md5(x).hexdigest(), 16)
+
+
+class Simhash(object):
+
+    def __init__(self, value, f=64, reg=r'[\w\u4e00-\u9fcc]+', hashfunc=None):
+        self.f = f
+        self.reg = reg
+        self.value = None
+
+        if isinstance(value, basestring):
+            pass
+        else:
+            raise Exception('Bad parameter with type {}'.format(type(value)))
+
+    def _tokenize(self, content):
+        """分词"""
+        return None
+
+
+    def build_by_text(self, content):
+        features = self._tokenize(content)
+        # 统计词频
+        features = {k:sum(1 for _ in g) for k, g in groupby(sorted(features))}
+        return self.build_by_features(features)
+
+    def build_by_features(self, features):
+
+
+
+
 
 def lcsstr(s1, s2):
     m = [[0 for i in range(len(s2) + 1)]  for j in range(len(s1) + 1)]
