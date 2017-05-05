@@ -5,6 +5,8 @@ import urllib
 import urllib2
 from lxml import etree
 
+import artextract
+
 
 def getHtml(url):
     request = urllib2.Request(url)
@@ -17,6 +19,13 @@ def _urlencode(name):
     name = name.encode('utf-8')
     name = urllib.quote(name)
     return name
+
+
+def getart(uri):
+    doc = getHtml(uri)
+    art = artextract.extract(doc)
+    return art
+
 
 
 key = u'钱包金服'
@@ -34,9 +43,15 @@ if divc:
     for div in divc:
         title = ''.join(div.xpath('./h3/a/text()'))
         print 'title:', title
+        outlink = ''.join(div.xpath('./h3/a/@href'))
+        print outlink
+        art = getart(outlink)
+        print art
         author = ''.join(div.xpath(".//p[@class='c-author']/text()"))
         print 'author:', author
         content = ''.join(div.xpath("./div//text()"))
         print content
     print '-------------' * 10
+
+
 
