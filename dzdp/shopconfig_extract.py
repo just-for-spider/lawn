@@ -7,25 +7,19 @@
 ########################################################################
  
 """
-File: printf.py
+File: shopconfig_extract.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/05/05 15:44:50
+Date: 2017/05/08 15:08:28
 """
 
-dic = {1: 2}
+import re
 
 
-line = '%s' % dic
+txt = """
+userId: 0,
+shopId: 5255504,
+shopCityId: 2,
+shopName: "肯德基", """
 
-print line
-
-
-
-a = "//div[@class='%s']"
-
-print type(a)
-
-b = a % u'大牛'
-
-print type(b)
-
+arr = re.split(',\s', txt)
+print arr

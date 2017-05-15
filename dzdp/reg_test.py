@@ -7,25 +7,17 @@
 ########################################################################
  
 """
-File: printf.py
+File: reg_test.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/05/05 15:44:50
+Date: 2017/05/10 13:12:12
 """
 
-dic = {1: 2}
+import re
 
+pat = re.compile('^http(s)?://www.dianping.com/search/category/\d+/\d+(/)?(g\d+)?(r\d+)?(p\d+)?$')
 
-line = '%s' % dic
-
-print line
-
-
-
-a = "//div[@class='%s']"
-
-print type(a)
-
-b = a % u'大牛'
-
-print type(b)
+url = 'https://www.dianping.com/search/category/2/10/g110r1489p6'
+m = pat.match(url)
+if m:
+    print m.group(0)
 

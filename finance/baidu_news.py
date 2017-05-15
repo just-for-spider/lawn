@@ -29,6 +29,7 @@ def getart(uri):
 
 
 key = u'钱包金服'
+key = u'西王集团'
 
 key = _urlencode(key)
 
@@ -45,8 +46,8 @@ if divc:
         print 'title:', title
         outlink = ''.join(div.xpath('./h3/a/@href'))
         print outlink
-        art = getart(outlink)
-        print art
+        #art = getart(outlink)
+        #print art
         author = ''.join(div.xpath(".//p[@class='c-author']/text()"))
         print 'author:', author
         content = ''.join(div.xpath("./div//text()"))

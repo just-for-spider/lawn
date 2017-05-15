@@ -7,25 +7,14 @@
 ########################################################################
  
 """
-File: printf.py
+File: strip_test.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/05/05 15:44:50
+Date: 2017/05/08 16:17:09
 """
 
-dic = {1: 2}
+a = "{xxxxxxx}"
 
+print a.strip('{}')
 
-line = '%s' % dic
-
-print line
-
-
-
-a = "//div[@class='%s']"
-
-print type(a)
-
-b = a % u'大牛'
-
-print type(b)
+print a.replace('{', "{aaa")
 

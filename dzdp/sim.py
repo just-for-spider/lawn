@@ -47,6 +47,7 @@ class Simhash(object):
         return self.build_by_features(features)
 
     def build_by_features(self, features):
+        pass
 
 
 

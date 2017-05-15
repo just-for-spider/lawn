@@ -40,6 +40,10 @@ def getinfo(url):
     dom = etree.HTML(html)
     phone = None
     addr = None
+
+    hour = dom.xpath(u"//p[@class='info info-indent']/span[text()='营业时间：']/following::span[1]/text()")[0]
+    print hour
+
     try:
         phone = dom.xpath(x_phone)[0].strip()
         addr = dom.xpath(x_addr)[0].strip()
@@ -85,19 +89,19 @@ def getlist(sname, regionid, phones):
 
 
 if __name__ == '__main__':
-    #url = 'http://www.dianping.com/shop/10436751'
-    #phone, addr = getinfo(url)
-    #print phone, addr
+    url = 'http://www.dianping.com/shop/2833240'
+    phone, addr = getinfo(url)
+    print phone, addr
 
-    import sys
-    for line in sys.stdin:
-        line = line.decode('utf-8')
-        sname, region, phone = line.strip().split()
-        phones = phone.split('|')
-        rs =getlist(sname, region, phones)
-        for r in rs:
-            print r
-        print '----------' * 20
+    #import sys
+    #for line in sys.stdin:
+    #    line = line.decode('utf-8')
+    #    sname, region, phone = line.strip().split()
+    #    phones = phone.split('|')
+    #    rs =getlist(sname, region, phones)
+    #    for r in rs:
+    #        print r
+    #    print '----------' * 20
 
     #sname = sys.argv[1].decode('utf-8')
     #region = sys.argv[2]

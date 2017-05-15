@@ -7,25 +7,14 @@
 ########################################################################
  
 """
-File: printf.py
+File: kk.py
 Author: wangqj(wangqj@qianbao.com)
-Date: 2017/05/05 15:44:50
+Date: 2017/05/08 20:03:16
 """
 
-dic = {1: 2}
+astr = "power:4,manaScore:0"
 
+t = [e.split(':') for e in astr.split(',')]
 
-line = '%s' % dic
-
-print line
-
-
-
-a = "//div[@class='%s']"
-
-print type(a)
-
-b = a % u'大牛'
-
-print type(b)
-
+for k, v in t:
+    print k, v
