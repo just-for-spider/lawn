@@ -1,0 +1,161 @@
+/home/app_bank/zhaoqipeng/QbSpider/QbSpider/spiders/dianxin_spider.py:17: ScrapyDeprecationWarning: Module `scrapy.spider` is deprecated, use `scrapy.spiders` instead
+  from scrapy.spider import CrawlSpider
+INFO:scrapy.utils.log:Scrapy 1.3.2 started (bot: QbSpider)
+2017-03-21 14:52:53 [scrapy.utils.log] INFO: Scrapy 1.3.2 started (bot: QbSpider)
+INFO:scrapy.utils.log:Overridden settings: {'NEWSPIDER_MODULE': 'QbSpider.spiders', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 150, 'CONCURRENT_REQUESTS': 150, 'RETRY_ENABLED': False, 'SPIDER_MODULES': ['QbSpider.spiders'], 'REACTOR_THREADPOOL_MAXSIZE': 150, 'RETRY_HTTP_CODES': [500, 501, 502, 503, 504, 408, 404, 403, 400, 405, 407, 307], 'BOT_NAME': 'QbSpider', 'DOWNLOAD_TIMEOUT': 5, 'LOG_STDOUT': True, 'COOKIES_ENABLED': False, 'RETRY_TIMES': 40, 'TELNETCONSOLE_ENABLED': 0, 'REDIRECT_ENABLED': False, 'REFERER_ENABLED': False, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'}
+2017-03-21 14:52:53 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'QbSpider.spiders', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 150, 'CONCURRENT_REQUESTS': 150, 'RETRY_ENABLED': False, 'SPIDER_MODULES': ['QbSpider.spiders'], 'REACTOR_THREADPOOL_MAXSIZE': 150, 'RETRY_HTTP_CODES': [500, 501, 502, 503, 504, 408, 404, 403, 400, 405, 407, 307], 'BOT_NAME': 'QbSpider', 'DOWNLOAD_TIMEOUT': 5, 'LOG_STDOUT': True, 'COOKIES_ENABLED': False, 'RETRY_TIMES': 40, 'TELNETCONSOLE_ENABLED': 0, 'REDIRECT_ENABLED': False, 'REFERER_ENABLED': False, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-03-21 14:52:53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+INFO:root:Connect redis server success
+2017-03-21 14:52:53 [root] INFO: Connect redis server success
+INFO:root:Connect redis server success
+2017-03-21 14:52:53 [root] INFO: Connect redis server success
+WARNING:py.warnings:/usr/local/python2.7/lib/python2.7/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2017-03-21 14:52:53 [py.warnings] WARNING: /usr/local/python2.7/lib/python2.7/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+WARNING:py.warnings:/home/app_bank/zhaoqipeng/QbSpider/QbSpider/middleware/RandomProxyMiddleware.py:11: ScrapyDeprecationWarning: Importing from scrapy.xlib.tx is deprecated and will no longer be supported in future Scrapy versions. Update your code to import from twisted proper.
+  from scrapy.xlib.tx import ResponseFailed
+
+2017-03-21 14:52:53 [py.warnings] WARNING: /home/app_bank/zhaoqipeng/QbSpider/QbSpider/middleware/RandomProxyMiddleware.py:11: ScrapyDeprecationWarning: Importing from scrapy.xlib.tx is deprecated and will no longer be supported in future Scrapy versions. Update your code to import from twisted proper.
+  from scrapy.xlib.tx import ResponseFailed
+
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'QbSpider.middleware.RandomUserAgentMiddleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'QbSpider.middleware.RandomProxyMiddleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-21 14:52:53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'QbSpider.middleware.RandomUserAgentMiddleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'QbSpider.middleware.RandomProxyMiddleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['QbSpider.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-21 14:52:53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['QbSpider.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+2017-03-21 14:52:53 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+2017-03-21 14:52:53 [scrapy.core.engine] INFO: Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-21 14:52:53 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:52:53 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:52:58 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:03 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:08 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:13 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:18 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:23 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:28 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:33 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+DEBUG:unicom:Read 1 requests from 'unicom'
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://uac.10010.com/portal/mallLogin.jsp?redirectURL=http://www.10010.com> (referer: None)
+response url: https://uac.10010.com/portal/mallLogin.jsp?redirectURL=http://www.10010.com
+response meta: {'download_timeout': 5.0, 'depth': 0, 'download_latency': 0.039463043212890625, 'download_slot': 'uac.10010.com', 'metass': {u'phone': u'18537179815', u'token': u'18c6a1e40e0311e7a43a964791d484c0', u'pwd': u'931119', u'key': u'YYS_LT_18537179815_18c6a1e40e0311e7a43a964791d484c0', u'site': u'YYS_LT'}}
+INFO:QbSpider.spiders.unicom_spider:账号<18537179815>,成功获取登录页面
+2017-03-21 14:53:33 [QbSpider.spiders.unicom_spider] INFO: 账号<18537179815>,成功获取登录页面
+new check_url: https://uac.10010.com/portal/Service/CheckNeedVerify?callback=jQuery_1490079213297&userName=18537179815&pwdType=01&_=1490079213297
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://uac.10010.com/portal/Service/CheckNeedVerify?callback=jQuery_1490079213297&userName=18537179815&pwdType=01&_=1490079213297> (referer: https://uac.10010.com/portal/mallLogin.jsp?redirectURL=http://www.10010.com)
+INFO:QbSpider.spiders.unicom_spider:账号<18537179815>,正在检查当前账户是否需要验证码
+2017-03-21 14:53:33 [QbSpider.spiders.unicom_spider] INFO: 账号<18537179815>,正在检查当前账户是否需要验证码
+body: jQuery_1490079213297({"resultCode":"false"});
+
+body: {u'resultCode': u'false'}
+INFO:QbSpider.spiders.unicom_spider:账号<18537179815>,当前账户无需验证码
+2017-03-21 14:53:33 [QbSpider.spiders.unicom_spider] INFO: 账号<18537179815>,当前账户无需验证码
+not check code: https://uac.10010.com/portal/Service/MallLogin?callback=jQuery_1490079213415&req_time=1490079213415&redirectURL=http://www.10010.com&userName=18537179815&password=931119&pwdType=01&productType=01&redirectType=01&rememberMe=1&_=1490079213415
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://uac.10010.com/portal/Service/MallLogin?callback=jQuery_1490079213415&req_time=1490079213415&redirectURL=http://www.10010.com&userName=18537179815&password=931119&pwdType=01&productType=01&redirectType=01&rememberMe=1&_=1490079213415> (referer: https://uac.10010.com/portal/Service/CheckNeedVerify?callback=jQuery_1490079213297&userName=18537179815&pwdType=01&_=1490079213297)
+INFO:QbSpider.spiders.unicom_spider:账号<18537179815>,分析登录页面
+2017-03-21 14:53:34 [QbSpider.spiders.unicom_spider] INFO: 账号<18537179815>,分析登录页面
+get set-cookie ['piw=%7B%22login_name%22%3A%22185****9815%22%2C%22nickName%22%3A%22%E5%B7%A6%E5%BC%A6%22%2C%22rme%22%3A%7B%22ac%22%3A%22%22%2C%22at%22%3A%22%22%2C%22pt%22%3A%2201%22%2C%22u%22%3A%2218537179815%22%7D%2C%22verifyState%22%3A%22%22%7D; domain=10010.com; expires=Thu, 20-Apr-2017 06:53:36 GMT; path=/', 'JUT=+WQC79ZYM1okO9gYctoULoMRIpcIebzodllP7DfwKJE73bTKw19+enZ+BDjFpteMJgIb1IB5dX4bv/49Tzj8Gl5qJR6k7kcyYa/Phb2t7epwU6cfsO6IoG1Kdf0pdMMMG81oVO1sy2+3sdPEmt4BuK+rAlz1u1IXmlCKWYQwGgABYlq8+pFEhVOqsqqjYJo7+1XU0NwqlUWv5L7qxsWvF5Pe3ijFqzuSM4jmcAfcFmVk/NOCiHA3J+Cj+eMVhyMH3rAUpuFZ6cEkj5al0xdoT4XDWUhiax16WxAoKlJQuPvHZpSCVntLBklqZuZvl6hFhk4pImhAA01+UAeOxuBMHqGcRdpTqjIMd9M8T25tG2c41uvbTDkpnOojY29RUu2m0IvArzTBuOP8vTg3bgZ5jZg6s8zmoTDotCSKXd7G9xArxHhz/jJhuCRgzB9V9MRw6Kyx54D0tAckrutZSfw2F0RWNWasrTuoesvMM0qZXGe1GgJ+QAVtZulHrGlPNtB+BvVZdmvuPQrRDpZhgALAvXB+jw2fg8pMMUDZ4zRb2kA=KyloF2wSM+eDbFGh5veT5w==; domain=10010.com; path=/', '_uop_id=c884258cd45154898a55ef0db031c82c; domain=10010.com; path=/']
+INFO:QbSpider.spiders.unicom_spider:账号<18537179815>,当前账户登陆成功
+2017-03-21 14:53:34 [QbSpider.spiders.unicom_spider] INFO: 账号<18537179815>,当前账户登陆成功
+login_info: https://uac.10010.com/portal/query/accessLogs?callback=getLoginInfo&_=1490079214068
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:34 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.10010.com
+DEBUG:requests.packages.urllib3.connectionpool:http://www.10010.com:80 "POST /mall-web/Index/logout HTTP/1.1" 200 9
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:38 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:43 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:QbSpider.spiders.unicom_spider:spider_idle
+2017-03-21 14:53:48 [QbSpider.spiders.unicom_spider] INFO: spider_idle
+INFO:scrapy.crawler:Received SIGINT, shutting down gracefully. Send again to force 
+2017-03-21 14:53:49 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+INFO:scrapy.core.engine:Closing spider (shutdown)
+2017-03-21 14:53:49 [scrapy.core.engine] INFO: Closing spider (shutdown)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 1467,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/response_bytes': 3514,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/200': 3,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2017, 3, 21, 6, 53, 49, 425271),
+ 'log_count/INFO': 28,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 2,
+ 'response_received_count': 3,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2017, 3, 21, 6, 52, 53, 141765)}
+2017-03-21 14:53:49 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1467,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/response_bytes': 3514,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/200': 3,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2017, 3, 21, 6, 53, 49, 425271),
+ 'log_count/INFO': 28,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 2,
+ 'response_received_count': 3,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2017, 3, 21, 6, 52, 53, 141765)}
+INFO:scrapy.core.engine:Spider closed (shutdown)
+2017-03-21 14:53:49 [scrapy.core.engine] INFO: Spider closed (shutdown)
