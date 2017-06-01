@@ -1,3 +1,0 @@
-Scrapy<0.19 --install-option=--single-version-externally-managed
-w3lib<1.9
-twisted==10.0.0
